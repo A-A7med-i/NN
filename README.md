@@ -1,5 +1,7 @@
 # NN: A Simple Neural Network Library
 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFNDr9Kz6GrjIzDrDp0uRhzZyDM75OVspxh8EwxoEaY21yx31Nt_dsZkRyH4aFyu2szRA&usqp=CAU" alt="NN Logo" width="1200"/>
+
 ## Overview
 
 NN is a lightweight neural network library implemented in Python. It provides the essential building blocks for constructing, training, and evaluating deep neural networks from scratch. The project is modular, making it easy to extend or modify components such as layers, activation functions, loss functions, and optimizers.
