@@ -1,6 +1,6 @@
 # NN:  Simple Neural Network Library
 
-<img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41377-024-01590-3/MediaObjects/41377_2024_1590_Fig3_HTML.png">
+<img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41377-024-01590-3/MediaObjects/41377_2024_1590_Fig3_HTML.png" width="1200">
 
 ## Overview
 
