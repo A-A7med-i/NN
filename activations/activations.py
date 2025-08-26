@@ -46,7 +46,7 @@ class Sigmoid(Activation):
         return s * (1 - s)
 
 
-class ReLU(Activation):
+class Relu(Activation):
     """
     Implements the Rectified Linear Unit (ReLU) activation function and its derivative.
 
