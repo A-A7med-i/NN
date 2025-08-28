@@ -5,7 +5,8 @@ from activations.activations import Activation
 
 
 class Dense(Layer):
-    """A fully connected neural network layer.
+    """
+    A fully connected neural network layer.
 
     This layer performs a linear transformation on the input data, followed by an
     element-wise activation function. It learns a set of weights and biases
@@ -13,7 +14,8 @@ class Dense(Layer):
     """
 
     def __init__(self, input_size: int, output_size: int, activation: Activation):
-        """Initializes the dense layer.
+        """
+        Initializes the dense layer.
 
         Args:
             input_size: The number of neurons in the previous layer, or the
@@ -32,7 +34,8 @@ class Dense(Layer):
         self.bias_grad: Optional[np.ndarray] = None
 
     def forward(self, X: np.ndarray) -> np.ndarray:
-        """Performs the forward pass for the dense layer.
+        """
+        Performs the forward pass for the dense layer.
 
         The forward pass computes the dot product of the input `X` with the
         layer's `weights`, adds the `bias`, and then applies the activation function.
@@ -51,7 +54,8 @@ class Dense(Layer):
         return self.activation.forward(self.last_z)
 
     def backward(self, grad: np.ndarray) -> np.ndarray:
-        """Performs the backward pass for the dense layer.
+        """
+        Performs the backward pass for the dense layer.
 
         This method calculates the gradients for the weights and biases of this layer
         and propagates the gradient backwards to the previous layer.
@@ -74,7 +78,8 @@ class Dense(Layer):
         return np.dot(grad_z, self.weights.T)
 
     def get_params(self) -> int:
-        """Returns the number of trainable parameters in the dense layer.
+        """
+        Returns the number of trainable parameters in the dense layer.
 
         The number of parameters is the sum of the number of weights and biases.
         """
