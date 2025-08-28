@@ -3,7 +3,8 @@ from abc import ABC, abstractmethod
 
 
 class Layer(ABC):
-    """Abstract base class for neural network layers.
+    """
+    Abstract base class for neural network layers.
 
     This class defines the interface that all custom neural network layers
     must implement. It ensures that every layer has a `forward` method
@@ -12,7 +13,8 @@ class Layer(ABC):
 
     @abstractmethod
     def forward(self, X: np.ndarray) -> np.ndarray:
-        """Performs the forward pass through the layer.
+        """
+        Performs the forward pass through the layer.
 
         Args:
             X: The input data for the layer, typically a NumPy array.
@@ -27,7 +29,8 @@ class Layer(ABC):
 
     @abstractmethod
     def backward(self, grad: np.ndarray) -> np.ndarray:
-        """Performs the backward pass through the layer.
+        """
+        Performs the backward pass through the layer.
 
         This method computes the gradients of the loss with respect to
         the layer's inputs and/or its own parameters, propagating the
