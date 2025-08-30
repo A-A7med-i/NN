@@ -2,7 +2,8 @@ import numpy as np
 
 
 class Loss:
-    """Base class for loss functions.
+    """
+    Base class for loss functions.
 
     This class provides a standard interface for all loss functions
     to ensure they can be used interchangeably within a neural network
@@ -10,7 +11,8 @@ class Loss:
     """
 
     def calculate(self, y_pred: np.ndarray, y_true: np.ndarray) -> float:
-        """Calculates the loss value between predicted and true labels.
+        """
+        Calculates the loss value between predicted and true labels.
 
         Args:
             y_pred: The predicted values from the model, as a NumPy array.
@@ -22,7 +24,8 @@ class Loss:
         raise NotImplementedError
 
     def derivative(self, y_pred: np.ndarray, y_true: np.ndarray) -> np.ndarray:
-        """Calculates the derivative of the loss with respect to the predicted values.
+        """
+        Calculates the derivative of the loss with respect to the predicted values.
 
         This derivative is essential for backpropagation to compute the gradients
         needed to update the model's weights.
