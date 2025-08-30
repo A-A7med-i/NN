@@ -3,7 +3,8 @@ from .base import Loss
 
 
 class MeanSquaredError(Loss):
-    """Mean Squared Error (MSE) loss function.
+    """
+    Mean Squared Error (MSE) loss function.
 
     This loss function calculates the average of the squares of the errors,
     which is the average squared difference between the predicted values and
@@ -11,7 +12,8 @@ class MeanSquaredError(Loss):
     """
 
     def calculate(self, y_pred: np.ndarray, y_true: np.ndarray) -> float:
-        """Calculates the Mean Squared Error loss.
+        """
+        Calculates the Mean Squared Error loss.
 
         Args:
             y_pred: The predicted values, a NumPy array.
@@ -23,7 +25,8 @@ class MeanSquaredError(Loss):
         return np.mean((y_pred - y_true) ** 2)
 
     def derivative(self, y_pred: np.ndarray, y_true: np.ndarray) -> np.ndarray:
-        """Calculates the derivative of the MSE loss with respect to y_pred.
+        """
+        Calculates the derivative of the MSE loss with respect to y_pred.
 
         Args:
             y_pred: The predicted values, a NumPy array.
@@ -37,7 +40,8 @@ class MeanSquaredError(Loss):
 
 
 class CategoricalCrossEntropy(Loss):
-    """Categorical Cross-Entropy loss function.
+    """
+    Categorical Cross-Entropy loss function.
 
     This loss function is used for multi-class classification problems. It
     measures the performance of a classification model whose output is a
@@ -45,7 +49,8 @@ class CategoricalCrossEntropy(Loss):
     """
 
     def calculate(self, y_pred: np.ndarray, y_true: np.ndarray) -> float:
-        """Calculates the Categorical Cross-Entropy loss.
+        """
+        Calculates the Categorical Cross-Entropy loss.
 
         A small value (1e-15) is clipped to prevent a log of zero, which
         would result in an undefined value.
@@ -63,7 +68,8 @@ class CategoricalCrossEntropy(Loss):
         return -np.mean(y_true * np.log(y_pred_clipped))
 
     def derivative(self, y_pred: np.ndarray, y_true: np.ndarray) -> np.ndarray:
-        """Calculates the derivative of the Categorical Cross-Entropy loss.
+        """
+        Calculates the derivative of the Categorical Cross-Entropy loss.
 
         Args:
             y_pred: The predicted probabilities, a NumPy array of shape
