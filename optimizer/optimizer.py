@@ -3,18 +3,28 @@ from .base import Optimizer, Layer
 
 
 class GD(Optimizer):
-    """Optimizer that implements the Gradient Descent algorithm.
+    """
+    Optimizer that implements the Gradient Descent algorithm.
 
     This optimizer updates the weights and biases of a layer by taking
     a step in the opposite direction of the gradient, scaled by the
     learning rate.
     """
 
-    def __init__(self, learning_rate = 0.01):
-        super().__init__(learning_rate)
+    def __init__(self, learning_rate: int = 0.01):
+        """
+        Initializes the optimizer with a learning rate.
+
+        Args:
+            learning_rate: A float that determines the step size at each
+                            iteration while moving toward a minimum of the loss
+                            function. Defaults to 0.01.
+        """
+        self.learning_rate = learning_rate
 
     def update_params(self, layer: Layer):
-        """Updates the weights and biases of a dense layer using Gradient Descent.
+        """
+        Updates the weights and biases of a dense layer using Gradient Descent.
 
         This method checks if the layer is an instance of `Dense` and, if so,
         applies the update rule: `param = param - learning_rate * grad`.
