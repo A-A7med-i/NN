@@ -7,7 +7,8 @@ from optimizer.base import Optimizer
 
 
 class DNN:
-    """Deep Neural Network model.
+    """
+    Deep Neural Network model.
 
     This class provides a framework for building, compiling, training,
     and making predictions with a deep neural network. It supports adding
@@ -15,7 +16,8 @@ class DNN:
     """
 
     def __init__(self):
-        """Initializes the Deep Neural Network.
+        """
+        Initializes the Deep Neural Network.
 
         Sets up an empty list for layers, and initializes loss, optimizer,
         and loss history as None or empty.
@@ -26,7 +28,8 @@ class DNN:
         self.loss_history: List[float] = []
 
     def add(self, layer: Layer):
-        """Adds a layer to the network.
+        """
+        Adds a layer to the network.
 
         Layers are added in the order they will be processed during the
         forward pass.
@@ -38,7 +41,8 @@ class DNN:
         self.layers.append(layer)
 
     def compile(self, loss: Loss, optimizer: Optimizer):
-        """Configures the model for training.
+        """
+        Configures the model for training.
 
         This method sets the loss function and optimizer to be used
         during the training process.
@@ -53,7 +57,8 @@ class DNN:
         self.optimizer = optimizer
 
     def predict(self, X: np.ndarray) -> np.ndarray:
-        """Performs a forward pass through the network to make predictions.
+        """
+        Performs a forward pass through the network to make predictions.
 
         Args:
             X: The input data for which to make predictions, a NumPy array.
@@ -70,7 +75,8 @@ class DNN:
         return output
 
     def backward(self, grad: np.ndarray):
-        """Performs a backward pass through the network to compute gradients.
+        """
+        Performs a backward pass through the network to compute gradients.
 
         The gradients are propagated from the output layer back through
         each preceding layer, updating the `weight_grad` and `bias_grad`
@@ -84,7 +90,8 @@ class DNN:
             grad = layer.backward(grad)
 
     def update_weights(self):
-        """Updates weights for all layers using the optimizer.
+        """
+        Updates weights for all layers using the optimizer.
 
         This method iterates through all layers in the network and calls
         the optimizer's `update_param` method for each layer, applying
@@ -106,7 +113,8 @@ class DNN:
         batch_size: int,
         verbose: bool = True,
     ):
-        """Trains the neural network using the provided data.
+        """
+        Trains the neural network using the provided data.
 
         The training process involves iterating through epochs, shuffling data,
         processing in batches, performing forward and backward passes,
